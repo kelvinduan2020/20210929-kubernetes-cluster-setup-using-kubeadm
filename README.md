@@ -89,7 +89,9 @@ sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig
   
 systemctl disable firewalld<br />
 modprobe br_netfilter<br />
-echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables<br />
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables<br />
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables<br />
+sysctl -p<br />
   
 ----------------------------------------------------------
   
