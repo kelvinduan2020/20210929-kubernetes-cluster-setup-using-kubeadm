@@ -120,8 +120,7 @@ systemctl start docker<br />
 **Disable Swap**
   
 swapoff -a<br />
-vi /etc/fstab and Comment the line with Swap Keyword<br />
-sudo sed -i '/ swap / s/^/#/' /etc/fstab<br />
+sed -i '/ swap / s/^/#/' /etc/fstab<br />
   
 -----------------------------------------------------
   
