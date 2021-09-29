@@ -148,5 +148,8 @@ kubectl get pods -n kube-system<br />
   
   kubeadm join 192.168.0.xxx:6443 --token XXX\
         --discovery-token-ca-cert-hash sha256:XX<br />
+        
+  kubeadm join 192.168.56.105:6443 --token aj1gzm.muipxmxmqyyb6qb9 \
+        --discovery-token-ca-cert-hash sha256:7a7970e26063dcaa4342e9ddda0db6a70e0cc6cd0d8b340a871b01b6c04616b7
 
   ---------------------------------------------------
