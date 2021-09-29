@@ -128,7 +128,7 @@ vi /etc/fstab and Comment the line with Swap Keyword<br />
   
 **Initialize Kubernetes Cluster**
 
-kubeadm init<br />
+kubeadm init --apiserver-advertise-address=192.168.56.105<br />
 mkdir -p $HOME/.kube<br />
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config<br />
 chown $(id -u):$(id -g) $HOME/.kube/config<br />
