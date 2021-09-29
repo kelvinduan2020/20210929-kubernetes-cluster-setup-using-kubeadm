@@ -121,6 +121,7 @@ systemctl start docker<br />
   
 swapoff -a<br />
 vi /etc/fstab and Comment the line with Swap Keyword<br />
+sudo sed -i '/ swap / s/^/#/' /etc/fstab<br />
   
 -----------------------------------------------------
   
