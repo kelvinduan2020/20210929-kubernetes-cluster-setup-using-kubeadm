@@ -143,11 +143,8 @@ kubectl get pods -n kube-system<br />
   **Join Worker Nodes **
   
   Use the token from Kubeadmin init screen. Below is a sample how it looks like.<br />
-  
-  kubeadm join 192.168.0.xxx:6443 --token XXX\
-        --discovery-token-ca-cert-hash sha256:XX<br />
-        
-  kubeadm join 192.168.56.105:6443 --token aj1gzm.muipxmxmqyyb6qb9 \
-        --discovery-token-ca-cert-hash sha256:7a7970e26063dcaa4342e9ddda0db6a70e0cc6cd0d8b340a871b01b6c04616b7
+ 
+ kubeadm join 100.0.0.2:6443 --token 5qnnxv.082cldbkpdwxmian \
+        --discovery-token-ca-cert-hash sha256:5debb29f2a619061e051a5c90f59f8345d1c98d12a28bb6b7fbb49bf0bcbf46e
 
   ---------------------------------------------------
