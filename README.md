@@ -68,10 +68,8 @@ Run the command  systemctl restart network to restart the network<br />
 
 Run the below commands on the machines. Change the IP address and host name as per your machine settings.<br />
 cat << EOF >> /etc/hosts<br />
-
-192.168.56.103 master<br />
-192.168.56.104 worker<br />
-
+100.0.0.2 master<br />
+100.0.0.3 worker<br />
 EOF
   
 -----------------------------------------------------------
@@ -126,7 +124,7 @@ sed -i '/ swap / s/^/#/' /etc/fstab<br />
   
 **Initialize Kubernetes Cluster**
 
-kubeadm init --apiserver-advertise-address=192.168.56.103<br />
+kubeadm init --apiserver-advertise-address=100.0.0.2<br />
 mkdir -p $HOME/.kube<br />
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config<br />
 chown $(id -u):$(id -g) $HOME/.kube/config<br />
